@@ -1,5 +1,6 @@
 
-why?=
+# Si ome si
+
 ```mermaid
 flowchart LR
   A["🌍 **Internet**<br>Origen del tráfico<br>Usuarios externos, clientes, bots"]
