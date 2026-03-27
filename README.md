@@ -99,9 +99,9 @@ Esta convención no responde a una obligación técnica, sino a una decisión de
 - Preparación del entorno en VMware Workstation
 - Creación de redes virtuales separadas por función
 - Despliegue inicial de:
-  - cliente Ubuntu
-  - servidor Ubuntu
-  - router/firewall OPNsense
+    - cliente Ubuntu
+    - servidor Ubuntu
+    - router/firewall OPNsense
 - Desactivación del DHCP integrado de VMware
 - Preparación para centralizar DHCP en el router
 - Validación de conectividad básica y acceso a una web simple
@@ -195,20 +195,20 @@ Esta convención no responde a una obligación técnica, sino a una decisión de
 ## Fase 14 — VPN y acceso remoto seguro
 
 - Pruebas con tecnologías como:
-  - Tailscale
-  - NetBird
-  - Headscale
-  - Netmaker
-  - ZeroTier
+    - Tailscale
+    - NetBird
+    - Headscale
+    - Netmaker
+    - ZeroTier
 - Acceso seguro al laboratorio desde fuera
 - Evaluación de distintos enfoques de conectividad overlay
 
 ## Fase 15 — Integración con cloud
 
 - Pruebas de conectividad con:
-  - AWS
-  - Azure
-  - Google Cloud
+    - AWS
+    - Azure
+    - Google Cloud
 - Diseño híbrido entre laboratorio local y recursos cloud
 - Validación de rutas, acceso y segmentación extendida
 

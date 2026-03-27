@@ -50,16 +50,16 @@ No incluye todavía:
 ### Máquinas virtuales desplegadas
 
 - **Ubuntu Client**
-  - Rol: cliente de prueba
-  - Red actual: Clientes
+    - Rol: cliente de prueba
+    - Red actual: Clientes
 
 - **Ubuntu Server**
-  - Rol: servidor de prueba
-  - Red actual: Clientes
+    - Rol: servidor de prueba
+    - Red actual: Clientes
 
 - **OPNsense**
-  - Rol: router/firewall central
-  - Interfaces: conectado a todos los adaptadores virtuales definidos en VMware
+    - Rol: router/firewall central
+    - Interfaces: conectado a todos los adaptadores virtuales definidos en VMware
 
 ## Estado actual de la topología
 
@@ -93,10 +93,10 @@ Pero todavía no valida una segmentación real entre cliente y servidor a travé
 
 - Se ha desplegado una máquina virtual con conexión a todos los adaptadores virtuales necesarios para actuar como router/firewall central.
 - Queda pendiente:
-  - asignación definitiva de interfaces
-  - configuración del DHCP
-  - definición de reglas de firewall
-  - pruebas de conectividad
+    - asignación definitiva de interfaces
+    - configuración del DHCP
+    - definición de reglas de firewall
+    - pruebas de conectividad
 
 ### Ubuntu Client
 

@@ -10,3 +10,17 @@
         max-width: 20%;
     }
 }
+
+.md-grid {
+  max-width: 100% !important;
+}
+
+.md-typeset {
+  font-size: 0.7rem !important;
+  line-height: 1.0 !important;
+}
+
+body {
+  font-weight: normal;
+  letter-spacing: normal;
+}
