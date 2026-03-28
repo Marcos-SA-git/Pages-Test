@@ -1,0 +1,48 @@
+# -- Menú Principal --
+# El menú principal se muestra en el encabezado en la parte superior de la página.
+
+[[main]]
+  name = "Proyectos"
+  pageRef = "Proyectos"
+  weight = 10
+
+# [[main]]
+#   name = "Ejemplos"
+#   weight = 20
+# 
+# [[main]]
+#   name = "Recetas"
+#   parent = "Ejemplos"
+#   pageRef = "guides"
+#   weight = 40
+
+
+[[main]]
+  identifier = "github"
+  pre = "github"
+  url = "https://github.com/Marcos-SA-git/"
+  weight = 400
+
+
+# [[subnavigation]]
+#   name = "An interesting topic"
+#   pageRef = "tags/interesting-topic"
+#   weight = 50
+# 
+# [[subnavigation]]
+#   name = "My Awesome Category"
+#   pageRef = "categories/awesome"
+#   weight = 20
+
+
+# -- Menú de Pie de Página --
+
+ [[footer]]
+   name = "Etiquetas"
+   pageRef = "tags"
+   weight = 10
+
+ [[footer]]
+   name = "Categorías"
+   pageRef = "authors"
+   weight = 20

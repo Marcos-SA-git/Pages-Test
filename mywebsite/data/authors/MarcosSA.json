@@ -1,0 +1,9 @@
+{
+  "name": "Marcos Sánchez",
+  "image": "img/author2.png",
+  "bio": "The Admin System",
+  "social": [
+    { "linkedin": "https://linkedin.com/in/marcos-sa-in" },
+    { "github": "https://github.com/marcos-sa-git" }
+  ]
+}

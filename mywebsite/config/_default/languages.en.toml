@@ -1,0 +1,22 @@
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Marcos HomeLab"
+
+[params]
+  displayName = "English"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  logo = "img/HomeLab.png"
+  description = "Maintaning the Matrix..."
+
+[params.author]
+  name = "Marcos Sánchez"
+  email = "marcospersonalmail@gmail.com"
+  image = "img/blowfish_logo.png"
+  headline = "Maintaning the Matrix..."
+  bio = "I'm the SysAdmin. I can do it."
+  links = [
+    { github = "https://github.com/Marcos-SA-git" }
+  ]
