@@ -1,5 +1,0 @@
-mkdocs
-mkdocs-bootswatch
-mkdocs-mermaid2-plugin
-mkdocs-panzoom-plugin
-pymdown-extensions
