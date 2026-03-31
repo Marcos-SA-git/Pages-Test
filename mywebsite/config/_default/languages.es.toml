@@ -12,8 +12,8 @@ title = "Laboratorio de Redes"
   description = "Manteniendo la Matrix..."
 
 [params.author]
-  name = "Blowfish"
-  image = "img/blowfish_logo.png"
+  name = "Marcos Sánchez"
+  image = "img/HomeLab.png"
   headline = "Manteniendo la Matrix..."
   bio = "Soy el administrador. Claro que puedo!"
   links = [
