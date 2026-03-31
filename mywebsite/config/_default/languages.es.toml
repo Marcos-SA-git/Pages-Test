@@ -1,7 +1,7 @@
 languageCode = "es"
 languageName = "Español"
 weight = 1
-title = "Marcos HomeLAB"
+title = "Laboratorio de Redes"
 
 [params]
   displayName = "Español"

@@ -6,3 +6,179 @@
   </a>
 </p>
 */}}
+
+<script src='{{ "js/svg-pan-zoom.min.js" | relURL }}'></script>
+<script>
+(() => {
+  const instances = new WeakMap();
+
+  function parseViewBox(svg) {
+    const vb = svg.getAttribute("viewBox");
+    if (!vb) return null;
+    const parts = vb.trim().split(/[\s,]+/).map(Number);
+    if (parts.length !== 4 || parts.some(v => !Number.isFinite(v))) return null;
+    return { x: parts[0], y: parts[1], width: parts[2], height: parts[3] };
+  }
+
+  function ensureSvgSize(svg) {
+    const vb = parseViewBox(svg);
+    if (!svg.getAttribute("height")) {
+      svg.setAttribute("height", vb ? String(vb.height) : "600");
+    }
+  }
+
+  function getFrame(container) {
+    if (container.parentElement && container.parentElement.classList.contains("mermaid-frame")) {
+      return container.parentElement;
+    }
+
+    const frame = document.createElement("div");
+    frame.className = "mermaid-frame";
+
+    const toolbar = document.createElement("div");
+    toolbar.className = "mermaid-toolbar";
+    toolbar.innerHTML = `
+      <button type="button" data-action="zoom-in" aria-label="Ampliar">+</button>
+      <button type="button" data-action="zoom-out" aria-label="Reducir">−</button>
+      <button type="button" data-action="reset" aria-label="Reiniciar zoom">reset</button>
+      <button type="button" data-action="fit" aria-label="Ajustar al área">ajustar</button>
+      <button type="button" data-action="fullscreen" aria-label="Pantalla completa">⛶</button>
+    `;
+
+    container.parentNode.insertBefore(frame, container);
+    frame.appendChild(toolbar);
+    frame.appendChild(container);
+
+    return frame;
+  }
+
+  function refreshInstance(svg) {
+    const instance = instances.get(svg);
+    if (!instance) return;
+    try {
+      instance.resize();
+      instance.updateBBox();
+      instance.fit();
+      instance.center();
+    } catch (e) {
+      console.warn("No se pudo refrescar panzoom", e);
+    }
+  }
+
+  function bindToolbar(frame, svg, instance) {
+    const toolbar = frame.querySelector(".mermaid-toolbar");
+    if (!toolbar || toolbar.dataset.bound === "true") return;
+
+    toolbar.addEventListener("click", async (event) => {
+      const button = event.target.closest("button[data-action]");
+      if (!button) return;
+
+      const action = button.dataset.action;
+
+      if (action === "zoom-in") {
+        instance.zoomIn();
+        return;
+      }
+
+      if (action === "zoom-out") {
+        instance.zoomOut();
+        return;
+      }
+
+      if (action === "reset") {
+        instance.resetZoom();
+        instance.center();
+        return;
+      }
+
+      if (action === "fit") {
+        instance.resize();
+        instance.updateBBox();
+        instance.fit();
+        instance.center();
+        return;
+      }
+
+      if (action === "fullscreen") {
+        try {
+          if (!document.fullscreenElement) {
+            await frame.requestFullscreen?.();
+          } else if (document.fullscreenElement === frame) {
+            await document.exitFullscreen?.();
+          }
+        } catch (e) {
+          console.warn("No se pudo cambiar a pantalla completa", e);
+        }
+      }
+    });
+
+    toolbar.dataset.bound = "true";
+  }
+
+  function initOne(container, index) {
+    if (typeof svgPanZoom !== "function") return;
+
+    const svg = container.querySelector("svg");
+    if (!svg || instances.has(svg)) return;
+
+    const rect = svg.getBoundingClientRect();
+    if (!rect.width || !rect.height) return;
+
+    ensureSvgSize(svg);
+
+    if (!svg.id) {
+      svg.id = `mermaid-svg-${index}`;
+    }
+
+    try {
+      const instance = svgPanZoom(svg, {
+        panEnabled: true,
+        zoomEnabled: true,
+        controlIconsEnabled: false,
+        mouseWheelZoomEnabled: true,
+        dblClickZoomEnabled: true,
+        preventMouseEventsDefault: true,
+        fit: true,
+        center: true,
+        minZoom: 0.5,
+        maxZoom: 20,
+        zoomScaleSensitivity: 0.2
+      });
+
+      const frame = getFrame(container);
+      bindToolbar(frame, svg, instance);
+      instances.set(svg, instance);
+    } catch (e) {
+      console.warn("Error inicializando svg-pan-zoom", e);
+    }
+  }
+
+  function scan() {
+    document.querySelectorAll(".mermaid").forEach((container, index) => {
+      initOne(container, index);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(scan, 120);
+  });
+
+  window.addEventListener("load", () => {
+    setTimeout(scan, 120);
+  });
+
+  document.addEventListener("fullscreenchange", () => {
+    setTimeout(() => {
+      document.querySelectorAll(".mermaid svg").forEach((svg) => {
+        refreshInstance(svg);
+      });
+    }, 80);
+  });
+
+  window.addEventListener("resize", () => {
+    document.querySelectorAll(".mermaid svg").forEach((svg) => {
+      refreshInstance(svg);
+    });
+  });
+})();
+</script>

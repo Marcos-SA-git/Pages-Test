@@ -11,11 +11,29 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "Docs"
-  pageRef = "docs"
+  name = "Home"
+  pageRef = "/"
   weight = 10
 
+[[main]]
+  name = "Architecture"
+  pageRef = "arch"
+  weight = 20
 
+[[main]]
+  name = "Phases"
+  pageRef = "phases"
+  weight = 30
+
+[[main]]
+  name = "Incidents"
+  pageRef = "incidents"
+  weight = 40
+
+[[main]]
+  name = "Decision Records"
+  pageRef = "adr"
+  weight = 50
 
 [[main]]
   identifier = "github"
@@ -34,6 +52,6 @@
    weight = 10
 
  [[footer]]
-   name = "About me"
-   pageRef = "About me"
+   name = "Categories"
+   pageRef = "categories"
    weight = 20

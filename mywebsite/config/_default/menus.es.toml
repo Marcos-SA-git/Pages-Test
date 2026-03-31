@@ -3,7 +3,7 @@
 
 [[main]]
   name = "Inicio"
-  pageRef = "content"
+  pageRef = "/"
   weight = 10
 
 [[main]]

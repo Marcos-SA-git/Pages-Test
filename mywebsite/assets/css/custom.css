@@ -1,0 +1,63 @@
+.mermaid-frame {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.mermaid {
+  overflow: hidden;
+  min-height: 300px;
+  border: none;
+  border-radius: 0.75rem;
+}
+
+.mermaid svg {
+  display: block;
+  width: 100%;
+  max-width: none !important;
+  cursor: grab;
+}
+
+.mermaid svg:active {
+  cursor: grabbing;
+}
+
+.mermaid-toolbar {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  z-index: 20;
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.mermaid-toolbar button {
+  border: 1px solid rgba(128, 128, 128, 0.25);
+  background: rgba(20, 20, 20, 0.75);
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.35rem 0.55rem;
+  font: inherit;
+  line-height: 1;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+}
+
+.mermaid-toolbar button:hover {
+  background: rgba(20, 20, 20, 0.9);
+}
+
+.mermaid-frame:fullscreen {
+  background: #111;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.mermaid-frame:fullscreen .mermaid {
+  height: calc(100vh - 4.5rem);
+  min-height: 0;
+}
+
+.mermaid-frame:fullscreen .mermaid svg {
+  height: 100% !important;
+}

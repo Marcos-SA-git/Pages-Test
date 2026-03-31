@@ -16,8 +16,8 @@
 
   
   
-    <title>Marcos HomeLAB</title>
-    <meta name="title" content="Marcos HomeLAB">
+    <title>Laboratorio de Redes</title>
+    <meta name="title" content="Laboratorio de Redes">
   
 
   
@@ -30,10 +30,10 @@
   <link rel="canonical" href="http://localhost:1313/">
   
     
-      <link rel="alternate" type="application/rss+xml" href="/index.xml" title="Marcos HomeLAB" />
+      <link rel="alternate" type="application/rss+xml" href="/index.xml" title="Laboratorio de Redes" />
   
     
-      <link rel="alternate" type="application/json" href="/index.json" title="Marcos HomeLAB" />
+      <link rel="alternate" type="application/json" href="/index.json" title="Laboratorio de Redes" />
   
 
   
@@ -52,7 +52,7 @@
 
   
   <meta property="og:url" content="http://localhost:1313/">
-  <meta property="og:site_name" content="Marcos HomeLAB">
+  <meta property="og:site_name" content="Laboratorio de Redes">
   <meta property="og:title" content="Enterprise Homelab">
   <meta property="og:description" content="Laboratorio virtual personal orientado a redes, sistemas, seguridad, automatización y servicios empresariales, desplegado sobre VMware Workstation y documentado con Markdown &#43; HUGO &#43; GitHub Actions &#43; GitHub Pages.
 El objetivo de este proyecto es diseñar, construir, documentar y publicar una infraestructura virtual modular que me permita practicar tecnologías reales de administración de sistemas, redes y servicios, al mismo tiempo que demuestro de forma clara mis capacidades técnicas, mi criterio de diseño y mi forma de trabajar.">
@@ -110,6 +110,8 @@ El objetivo de este proyecto es diseñar, construir, documentar y publicar una i
   
   
   
+    
+  
   
     
   
@@ -117,8 +119,8 @@ El objetivo de este proyecto es diseñar, construir, documentar y publicar una i
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.e1256adebba73458ba98ff191c69f731cc1d7e8198c05d975557b88c7e352e3e60d834ab5c273662dfd6e3e1de0cd47a47cc831779fafc0f9549a59f05813866.css"
-    integrity="sha512-4SVq3runNFi6mP8ZHGn3McwdfoGYwF2XVVe4jH41Lj5g2DSrXCc2Yt/W4&#43;HeDNR6R8yDF3n6/A&#43;VSaWfBYE4Zg==">
+    href="/css/main.bundle.min.679605e0766007167cd861a3e3d9f1252c8179e636793db5c66176b369232b23915c4163427f777951ac7d41f5823439ba820408f47a560c473c96f4537041ae.css"
+    integrity="sha512-Z5YF4HZgBxZ82GGj49nxJSyBeeY2eT21xmF2s2kjKyORXEFjQn93eVGsfUH1gjQ5uoIECPR6VgxHPJb0U3BBrg==">
 
   
   
@@ -225,7 +227,7 @@ El objetivo de este proyecto es diseñar, construir, documentar y publicar una i
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "http://localhost:1313/",
-    "name": "Marcos HomeLAB",
+    "name": "Laboratorio de Redes",
     "description": "Manteniendo la Matrix...",
     "inLanguage": "es",
     "url": "http://localhost:1313/",
@@ -301,7 +303,7 @@ El objetivo de este proyecto es diseñar, construir, documentar y publicar una i
     
       <div>
         <a href="/" class="flex">
-          <span class="sr-only">Marcos HomeLAB</span>
+          <span class="sr-only">Laboratorio de Redes</span>
           
             <img
               src="/img/HomeLab.png"
@@ -316,7 +318,7 @@ El objetivo de este proyecto es diseñar, construir, documentar y publicar una i
   
   
     <a href="/" class="text-base font-medium truncate min-w-0 shrink">
-      Marcos HomeLAB
+      Laboratorio de Redes
     </a>
   
   <div class="flex items-center ms-auto">
@@ -327,11 +329,11 @@ El objetivo de este proyecto es diseñar, construir, documentar y publicar una i
       
   
     <a
-      href=""
+      href="/"
       
       class="flex items-center bf-icon-color-hover"
       aria-label="Inicio"
-      title="">
+      title="Enterprise Homelab">
       
       
         <span class="text-base font-medium break-normal">
@@ -557,12 +559,12 @@ El objetivo de este proyecto es diseñar, construir, documentar y publicar una i
     
     <div class="px-2">
       <a
-        href=""
+        href="/"
         aria-label="Inicio"
         
         class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
         
-        <span title="" class="text-2xl font-bold tracking-tight">
+        <span title="Enterprise Homelab" class="text-2xl font-bold tracking-tight">
           Inicio
         </span>
         
@@ -1428,6 +1430,181 @@ El objetivo de este proyecto es diseñar, construir, documentar y publicar una i
     
 
 
+<script src='/js/svg-pan-zoom.min.js'></script>
+<script>
+(() => {
+  const instances = new WeakMap();
+
+  function parseViewBox(svg) {
+    const vb = svg.getAttribute("viewBox");
+    if (!vb) return null;
+    const parts = vb.trim().split(/[\s,]+/).map(Number);
+    if (parts.length !== 4 || parts.some(v => !Number.isFinite(v))) return null;
+    return { x: parts[0], y: parts[1], width: parts[2], height: parts[3] };
+  }
+
+  function ensureSvgSize(svg) {
+    const vb = parseViewBox(svg);
+    if (!svg.getAttribute("height")) {
+      svg.setAttribute("height", vb ? String(vb.height) : "600");
+    }
+  }
+
+  function getFrame(container) {
+    if (container.parentElement && container.parentElement.classList.contains("mermaid-frame")) {
+      return container.parentElement;
+    }
+
+    const frame = document.createElement("div");
+    frame.className = "mermaid-frame";
+
+    const toolbar = document.createElement("div");
+    toolbar.className = "mermaid-toolbar";
+    toolbar.innerHTML = `
+      <button type="button" data-action="zoom-in" aria-label="Ampliar">+</button>
+      <button type="button" data-action="zoom-out" aria-label="Reducir">−</button>
+      <button type="button" data-action="reset" aria-label="Reiniciar zoom">reset</button>
+      <button type="button" data-action="fit" aria-label="Ajustar al área">ajustar</button>
+      <button type="button" data-action="fullscreen" aria-label="Pantalla completa">⛶</button>
+    `;
+
+    container.parentNode.insertBefore(frame, container);
+    frame.appendChild(toolbar);
+    frame.appendChild(container);
+
+    return frame;
+  }
+
+  function refreshInstance(svg) {
+    const instance = instances.get(svg);
+    if (!instance) return;
+    try {
+      instance.resize();
+      instance.updateBBox();
+      instance.fit();
+      instance.center();
+    } catch (e) {
+      console.warn("No se pudo refrescar panzoom", e);
+    }
+  }
+
+  function bindToolbar(frame, svg, instance) {
+    const toolbar = frame.querySelector(".mermaid-toolbar");
+    if (!toolbar || toolbar.dataset.bound === "true") return;
+
+    toolbar.addEventListener("click", async (event) => {
+      const button = event.target.closest("button[data-action]");
+      if (!button) return;
+
+      const action = button.dataset.action;
+
+      if (action === "zoom-in") {
+        instance.zoomIn();
+        return;
+      }
+
+      if (action === "zoom-out") {
+        instance.zoomOut();
+        return;
+      }
+
+      if (action === "reset") {
+        instance.resetZoom();
+        instance.center();
+        return;
+      }
+
+      if (action === "fit") {
+        instance.resize();
+        instance.updateBBox();
+        instance.fit();
+        instance.center();
+        return;
+      }
+
+      if (action === "fullscreen") {
+        try {
+          if (!document.fullscreenElement) {
+            await frame.requestFullscreen?.();
+          } else if (document.fullscreenElement === frame) {
+            await document.exitFullscreen?.();
+          }
+        } catch (e) {
+          console.warn("No se pudo cambiar a pantalla completa", e);
+        }
+      }
+    });
+
+    toolbar.dataset.bound = "true";
+  }
+
+  function initOne(container, index) {
+    if (typeof svgPanZoom !== "function") return;
+
+    const svg = container.querySelector("svg");
+    if (!svg || instances.has(svg)) return;
+
+    const rect = svg.getBoundingClientRect();
+    if (!rect.width || !rect.height) return;
+
+    ensureSvgSize(svg);
+
+    if (!svg.id) {
+      svg.id = `mermaid-svg-${index}`;
+    }
+
+    try {
+      const instance = svgPanZoom(svg, {
+        panEnabled: true,
+        zoomEnabled: true,
+        controlIconsEnabled: false,
+        mouseWheelZoomEnabled: true,
+        dblClickZoomEnabled: true,
+        preventMouseEventsDefault: true,
+        fit: true,
+        center: true,
+        minZoom: 0.5,
+        maxZoom: 20,
+        zoomScaleSensitivity: 0.2
+      });
+
+      const frame = getFrame(container);
+      bindToolbar(frame, svg, instance);
+      instances.set(svg, instance);
+    } catch (e) {
+      console.warn("Error inicializando svg-pan-zoom", e);
+    }
+  }
+
+  function scan() {
+    document.querySelectorAll(".mermaid").forEach((container, index) => {
+      initOne(container, index);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(scan, 120);
+  });
+
+  window.addEventListener("load", () => {
+    setTimeout(scan, 120);
+  });
+
+  document.addEventListener("fullscreenchange", () => {
+    setTimeout(() => {
+      document.querySelectorAll(".mermaid svg").forEach((svg) => {
+        refreshInstance(svg);
+      });
+    }, 80);
+  });
+
+  window.addEventListener("resize", () => {
+    document.querySelectorAll(".mermaid svg").forEach((svg) => {
+      refreshInstance(svg);
+    });
+  });
+})();
+</script>
   
 </footer>
 <div
