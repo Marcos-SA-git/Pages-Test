@@ -1,3 +1,5 @@
+https://marcos-sa-git.github.io/Pages-Test/
+
 # Enterprise Homelab
 
 Laboratorio virtual personal orientado a redes, sistemas, seguridad, automatización y servicios empresariales, desplegado sobre **VMware Workstation** y documentado con **Markdown + MkDocs + GitHub Actions + GitHub Pages**.
