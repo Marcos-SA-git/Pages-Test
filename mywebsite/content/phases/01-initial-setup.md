@@ -1,4 +1,6 @@
-# Fase 1 - Configuración inicial
+---
+title: "Fase 1 - Configuración inicial"
+---
 
 ## Objetivo
 
@@ -17,6 +19,8 @@ El objetivo funcional inmediato de esta fase es:
 Esta fase se centra en la preparación inicial del entorno, no en el despliegue completo del laboratorio.
 
 Incluye:
+
+[hold](https://dsafa.com/)
 
 - diseño inicial de subredes
 - creación de VMs base

@@ -2,9 +2,29 @@
 # El menú principal se muestra en el encabezado en la parte superior de la página.
 
 [[main]]
-  name = "Proyectos"
-  pageRef = "Proyectos"
+  name = "Inicio"
+  pageRef = "content"
   weight = 10
+
+[[main]]
+  name = "Arquitectura"
+  pageRef = "arch"
+  weight = 20
+
+[[main]]
+  name = "Fases"
+  pageRef = "phases"
+  weight = 30
+
+[[main]]
+  name = "Incidencias"
+  pageRef = "incidents"
+  weight = 40
+
+[[main]]
+  name = "Toma de decisiones"
+  pageRef = "adr"
+  weight = 50
 
 # [[main]]
 #   name = "Ejemplos"
@@ -44,5 +64,5 @@
 
  [[footer]]
    name = "Categorías"
-   pageRef = "authors"
+   pageRef = "categories"
    weight = 20

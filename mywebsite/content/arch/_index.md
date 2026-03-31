@@ -1,7 +1,7 @@
 
 # Si ome si
 
-```mermaid
+{{< mermaid >}}
 flowchart LR
   A["🌍 **Internet**<br>Origen del tráfico<br>Usuarios externos, clientes, bots"]
   subgraph AWS
@@ -29,6 +29,6 @@ flowchart LR
   D -.-> C
   C -.-> B
   B -.-> A
-```
+{{< /mermaid >}}
 
 guyk

@@ -1,0 +1,36 @@
+/* Colors from: */
+/* https://materialui.co/colors */
+:root {
+  --color-neutral: 255, 255, 255;
+  /* Gray */
+  --color-neutral-50: rgb(255, 160, 0);
+  --color-neutral-100: rgb(207, 216, 220);
+  --color-neutral-200: rgb(176, 190, 197);
+  --color-neutral-300: rgb(240, 220, 255);
+  --color-neutral-400: rgb(120, 144, 156);
+  --color-neutral-500: rgb(0, 95, 160);
+  --color-neutral-600: rgb(71, 85, 105);
+  --color-neutral-700: rgb(209, 118, 0);
+  --color-neutral-800: rgb(45, 0, 80);
+  --color-neutral-900: rgb(38, 50, 56);
+  --color-primary-50: rgb(241, 230, 255);
+  --color-primary-100: rgb(217, 184, 255);
+  --color-primary-200: rgb(192, 138, 255);
+  --color-primary-300: rgb(168, 92, 255);
+  --color-primary-400: rgb(0, 150, 200);
+  --color-primary-500: rgb(119, 0, 255);
+  --color-primary-600: rgb(209, 118, 0);
+  --color-primary-700: rgb(76, 0, 163);
+  --color-primary-800: rgb(55, 0, 117);
+  --color-primary-900: rgb(33, 0, 71);
+  --color-secondary-50: rgb(255, 244, 230);
+  --color-secondary-100: rgb(255, 224, 184);
+  --color-secondary-200: rgb(255, 204, 138);
+  --color-secondary-300: rgb(255, 184, 92);
+  --color-secondary-400: rgb(10, 255, 180);
+  --color-secondary-500: rgb(255, 143, 0);
+  --color-secondary-600: rgb(255, 118, 0);
+  --color-secondary-700: rgb(0, 165, 22);
+  --color-secondary-800: rgb(117, 66, 0);
+  --color-secondary-900: rgb(161, 91, 0);
+}

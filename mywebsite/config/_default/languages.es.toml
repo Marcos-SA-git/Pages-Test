@@ -1,13 +1,13 @@
 languageCode = "es"
 languageName = "Español"
-weight = 6
+weight = 1
 title = "Marcos HomeLAB"
 
 [params]
   displayName = "Español"
   isoCode = "es"
   rtl = false
-  dateFormat = "2 de Enero de 2006"
+  dateFormat = "02 de January de 2006"
   logo = "img/HomeLab.png"
   description = "Manteniendo la Matrix..."
 
