@@ -20,8 +20,6 @@ Esta fase se centra en la preparación inicial del entorno, no en el despliegue 
 
 Incluye:
 
-[hold](https://dsafa.com/)
-
 - diseño inicial de subredes
 - creación de VMs base
 - conexión de interfaces virtuales

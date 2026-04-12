@@ -17,13 +17,24 @@
   weight = 30
 
 [[main]]
+   name = "Fase 0 - Configuración inicial"
+   parent = "Fases"
+   pageRef = "phases/00-initial-setup.md"
+   weight = 31
+
+[[main]]
   name = "Incidencias"
   pageRef = "incidents"
   weight = 40
 
 [[main]]
-  name = "Toma de decisiones"
+  name = "Decisiones Técnicas"
   pageRef = "adr"
+  weight = 50
+
+[[main]]
+  name = "Próximos pasos"
+  pageRef = "roadmap"
   weight = 50
 
 # [[main]]
@@ -58,11 +69,16 @@
 # -- Menú de Pie de Página --
 
  [[footer]]
-   name = "Etiquetas"
-   pageRef = "tags"
-   weight = 10
+  name = "Etiquetas"
+  pageRef = "tags"
+  weight = 10
 
  [[footer]]
-   name = "Categorías"
-   pageRef = "categories"
-   weight = 20
+  name = "Categorías"
+  pageRef = "categories"
+  weight = 20
+
+ [[footer]]
+  name = "Sobre esta web"
+  pageRef = "about"
+  weight = 30

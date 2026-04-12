@@ -1,5 +1,6 @@
-
-# Si ome si
+---
+title: "Arquitectura del proyecto"
+---
 
 {{< mermaid >}}
 flowchart LR
@@ -30,5 +31,3 @@ flowchart LR
   C -.-> B
   B -.-> A
 {{< /mermaid >}}
-
-guyk
