@@ -1,4 +1,6 @@
-# ADR 001 - Esquema de direccionamiento y segmentación inicial
+---
+title: "001 - Esquema de direccionamiento y segmentación inicial"
+---
 
 ## Estado
 

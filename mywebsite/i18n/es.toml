@@ -1,0 +1,32 @@
+[browse_by_software]
+other = "Explorar por software"
+
+[browse_by_service]
+other = "Explorar por servicio"
+
+[browse_by_phase]
+other = "Explorar por fases"
+
+[browse_by_issue_type]
+other = "Explorar por tipo de incidencia"
+
+[services]
+other = "Servicios"
+
+[software]
+other = "Software"
+
+[phases]
+other = "Fases"
+
+[all_procedures]
+other = "Todos los procedimientos"
+
+[all_incidents]
+other = "Todas las incidencias"
+
+[replicable_procedures_intro]
+other = "Esta sección contiene procedimientos reutilizables, extraídos del proyecto y pensados para repetirse de forma controlada."
+
+[issue_types]
+other = "Tipos de incidencia"

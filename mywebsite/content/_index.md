@@ -10,46 +10,32 @@ Desde la planificación, despligue, puesta en marcha, medidas de seguridad y aut
 
 ---
 
-### 1. Desarrollo técnico
+## Qué quiero demostrar con este proyecto
 
-Construir un entorno progresivamente más complejo para practicar de forma demostrable:
+A través de este homelab quiero demostrar que soy capaz de:
 
-- Segmentación de red
-- Routing y firewalling
-- DHCP y DNS
-- Publicación de servicios
-- Administración de servidores Linux
-- Identidad y autenticación centralizada
-- SSO
-- Observabilidad y dashboards
-- Bases de datos
-- Contenedores y orquestación
-- Copias de seguridad
-- Conectividad híbrida con nodos remotos y cloud
-
-### 2. Portfolio profesional
-
-Usar este laboratorio como una forma real de mostrar mis habilidades como:
-
-- **Administrador de sistemas**
-- **Administrador de redes**
-- **Perfil técnico orientado a infraestructura**
-- **Profesional con capacidad de documentación, análisis y resolución de problemas**
-- **Perfil con mentalidad de desarrollador**, al aplicar versionado, documentación como código, automatización y publicación estructurada del trabajo
-
-No se trata solo de “hacer máquinas virtuales”, sino de diseñar un entorno coherente, escalable y bien documentado, parecido en filosofía a un pequeño entorno empresarial.
+- Diseñar una arquitectura técnica con intención
+- Segmentar redes y pensar en seguridad desde el inicio
+- Desplegar y mantener servicios de infraestructura
+- Analizar problemas y resolver incidencias reales
+- Documentar de forma clara y profesional
+- Trabajar con repositorios, automatización y publicación técnica
+- Construir un portfolio técnico basado en trabajo real, no solo teoría
 
 ---
 
-## Objetivos principales
+## Documentación
 
-- Diseñar una red virtual segmentada por funciones
-- Centralizar el routing y el control del tráfico en un firewall/router
-- Desplegar servicios de infraestructura de forma progresiva
-- Practicar troubleshooting real y registrar incidencias y lecciones aprendidas
-- Documentar el proceso con un enfoque claro, replicable y profesional
-- Publicar el progreso y la arquitectura en GitHub Pages
-- Conectar en el futuro este laboratorio con una web personal / dominio propio
+La documentación del proyecto se organiza en varias capas:
+
+- Visión general de arquitectura
+- Plan de direccionamiento
+- Fases del despliegue
+- Decisiones técnicas importantes
+- Incidencias y aprendizajes
+- Procedimientos replicables
+
+Esto me permite usar el laboratorio no solo como entorno de práctica, sino también como proyecto técnico demostrable.
 
 ---
 
@@ -63,46 +49,37 @@ El objetivo no es crear un laboratorio gigantesco desde el primer día, sino una
 
 ---
 
+## Planteamiento de la red
 
+### Convención usada
 
----
+Las redes siguen el siguiente esquema lógico:
 
-## Stack principal del proyecto
+- **Primer octeto**: clase / bloque privado
+- **Segundo octeto**: lugar / sitio / entorno
+- **Tercer octeto**: uso / segmento / propósito
+- **Cuarto octeto**: IP asignada al equipo
 
-- **VMware Workstation**
-- **OPNsense**
-- **Ubuntu / Ubuntu Server**
-- **GitHub**
-- **GitHub Actions**
-- **GitHub Pages**
-- **MkDocs**
-- **Markdown**
+- **Máscara de red**: 255.255.255.0 (CIDR: /24)
 
-Stack previsto a medio plazo:
+> Nota: se trata de una convención interna de diseño para facilitar lectura y escalabilidad, no de una regla técnica obligatoria.
 
-- Active Directory o similar
-- SSO
-- Docker
-- Kubernetes / K3s
-- WordPress
-- bases de datos
-- observabilidad
-- VPNs overlay
-- integración cloud
+### Redes definidas
 
----
+| Red | Uso | Estado |
+| --- | --- | ------ |
+| 10.10.10.0/24 | Administración / Gestión | Activo |
+| 10.10.20.0/24 | Servidores | Activo |
+| 10.10.30.0/24 | Clientes | Activo |
+| 10.10.40.0/24 | IoTs | - |
+| 10.10.50.0/24 | DMZ | - |
+| 10.10.60.0/24 | Backup | - |
+| 10.20.10.0/24 | Offsite | - |
+| 10.x.x.x/24 | Extra | Opcional |
 
-## Qué quiero demostrar con este proyecto
+### Diagrama de arquitectura general
 
-A través de este homelab quiero demostrar que soy capaz de:
-
-- diseñar una arquitectura técnica con intención
-- segmentar redes y pensar en seguridad desde el inicio
-- desplegar y mantener servicios de infraestructura
-- analizar problemas y resolver incidencias reales
-- documentar de forma clara y profesional
-- trabajar con repositorios, automatización y publicación técnica
-- construir un portfolio técnico basado en trabajo real, no solo teoría
+![Diagrama del proyecto](../assets/img/high-level-homelab-architecture.drawio.svg)
 
 ---
 
@@ -119,29 +96,8 @@ La intención es evolucionarlo por fases, manteniendo siempre:
 
 ---
 
-## Documentación
-
-La documentación del proyecto se organiza en varias capas:
-
-- visión general de arquitectura
-- plan de direccionamiento
-- fases del despliegue
-- decisiones técnicas importantes
-- incidencias y aprendizajes
-- procedimientos replicables
-
-Esto me permite usar el laboratorio no solo como entorno de práctica, sino también como proyecto técnico demostrable.
-
----
-
 ## Visión a futuro
 
 A medio y largo plazo, este homelab se conectará con mi futura web personal y servirá como una pieza central de mi portfolio técnico.
 
 La idea es que cada proyecto o bloque del laboratorio tenga su propia documentación pública, bien estructurada y accesible, mostrando no solo el resultado final, sino también el proceso, las decisiones y la evolución del entorno.
-
----
-
-## Nota
-
-Este proyecto está en evolución continua. Algunas fases están definidas a nivel de diseño pero todavía no implementadas por completo. La prioridad es avanzar de forma ordenada, entendiendo cada capa antes de añadir la siguiente.

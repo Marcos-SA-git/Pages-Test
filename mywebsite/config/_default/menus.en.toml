@@ -16,13 +16,13 @@
   weight = 10
 
 [[main]]
-  name = "Architecture"
-  pageRef = "arch"
+  name = "Phases"
+  pageRef = "phases"
   weight = 20
 
 [[main]]
-  name = "Phases"
-  pageRef = "phases"
+  name = "Decision Records"
+  pageRef = "adr"
   weight = 30
 
 [[main]]
@@ -31,8 +31,8 @@
   weight = 40
 
 [[main]]
-  name = "Decision Records"
-  pageRef = "adr"
+  name = "Procedures"
+  pageRef = "procedures"
   weight = 50
 
 [[main]]

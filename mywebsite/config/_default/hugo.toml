@@ -27,10 +27,26 @@ enableEmoji = true
   anchor = 'Center'
 
 [taxonomies]
-  tag = "tags"
-  category = "categories"
-  author = "authors"
-  series = "series"
+  i_software = "i_software"
+  p_software = "p_software"
+  # Para encontrar todo lo relacionado con una herramienta concreta. (opnsense, ubuntu, vmware, DNS unbound, ...)
+  
+  i_service = "i_services"
+  p_service = "p_services"
+  # Para encontrar funciones técnicas, no productos (dns, dhcp, firewall, nat, routing, proxy, load-balancing, web-server, backup, observability)
+  
+  i_phase = "i_phases"
+  p_phase = "p_phases"
+  # En qué momento del proyecto (phase-1, phase-2, phase-3, phase-4, ...)
+  
+  issue_type = "issue_types"
+  # Tipo de problema (access, network, firewall, performance, ...)
+  
+  kind = "kinds"
+  # Qué tipo de documento es (overview, phase, procedure, incident, decision, note, ...)
+  
+  network_area = "network_areas"
+  # Sobre qué zona de red actúa (management, clients, servers, dmz, iot, backup, offsite, cloud, ...)
 
 [sitemap]
   changefreq = 'always'

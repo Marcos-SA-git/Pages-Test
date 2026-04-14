@@ -1,8 +1,22 @@
-# Incidencia 001 - Conflicto entre VMware y características de virtualización de Windows
+---
+title: "Incidencia 001 - Conflicto entre VMware y características de virtualización de Windows"
+i_software:
+    - VMware
+i_services:
+    -
+i_phases:
+    - phase-00
+issue_types:
+    - virtualización
+---
 
 ## Síntoma
 
 VMware no disponía de acceso completo a las capacidades de virtualización del equipo, lo que impedía un funcionamiento correcto del entorno.
+
+Errores presenciados:
+
+- Virtualized AMD-V/RVI is not supported on this platform.
 
 ## Causa
 

@@ -7,20 +7,14 @@
   weight = 10
 
 [[main]]
-  name = "Arquitectura"
-  pageRef = "arch"
+  name = "Fases"
+  pageRef = "phases"
   weight = 20
 
 [[main]]
-  name = "Fases"
-  pageRef = "phases"
+  name = "Decisiones Técnicas"
+  pageRef = "adr"
   weight = 30
-
-[[main]]
-   name = "Fase 0 - Configuración inicial"
-   parent = "Fases"
-   pageRef = "phases/00-initial-setup.md"
-   weight = 31
 
 [[main]]
   name = "Incidencias"
@@ -28,8 +22,8 @@
   weight = 40
 
 [[main]]
-  name = "Decisiones Técnicas"
-  pageRef = "adr"
+  name = "Procedimientos"
+  pageRef = "procedures"
   weight = 50
 
 [[main]]
@@ -69,16 +63,11 @@
 # -- Menú de Pie de Página --
 
  [[footer]]
-  name = "Etiquetas"
-  pageRef = "tags"
+  name = "Sobre esta web"
+  pageRef = "about"
   weight = 10
 
  [[footer]]
-  name = "Categorías"
-  pageRef = "categories"
+  name = "Etiquetas"
+  pageRef = "tags"
   weight = 20
-
- [[footer]]
-  name = "Sobre esta web"
-  pageRef = "about"
-  weight = 30

@@ -1,0 +1,29 @@
+[browse_by_software]
+other = "Browse by software"
+
+[browse_by_service]
+other = "Browse by service"
+
+[browse_by_phase]
+other = "Browse by phase"
+
+[browse_by_issue_type]
+other = "Browse by issue type"
+
+[services]
+other = "Services"
+
+[software]
+other = "Software"
+
+[phases]
+other = "Phases"
+
+[all_procedures]
+other = "All procedures"
+
+[all_incidents]
+other = "All incidents"
+
+[replicable_procedures_intro]
+other = "This section contains reusable step-by-step procedures extracted from the project."
