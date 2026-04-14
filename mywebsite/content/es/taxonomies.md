@@ -7,10 +7,10 @@ Esta página define cómo deben usarse las etiquetas del proyecto para mantener 
 
 El objetivo no es añadir etiquetas por añadir, sino crear una estructura que permita:
 
-- encontrar contenido rápidamente
-- evitar duplicados y sinónimos innecesarios
-- diferenciar claramente entre herramientas, funciones y contexto
-- mantener una nomenclatura estable a medida que el laboratorio crece
+- Encontrar contenido rápidamente
+- Evitar duplicados y sinónimos innecesarios
+- Diferenciar claramente entre herramientas, funciones y contexto
+- Mantener una nomenclatura estable a medida que el laboratorio crece
 
 ---
 
@@ -29,9 +29,9 @@ Ejemplo:
 
 Se recomienda usar siempre:
 
-- minúsculas
-- palabras separadas por guiones
-- términos concretos y técnicos
+- Minúsculas
+- Palabras separadas por guiones
+- Términos concretos y técnicos
 
 Ejemplos correctos:
 
@@ -93,13 +93,13 @@ Sirve para preguntas como:
 
 ### Qué debe ir aquí
 
-- sistemas operativos
-- hipervisores
-- firewalls
-- proxies
-- herramientas de observabilidad
-- plataformas cloud
-- software de automatización
+- Sistemas operativos
+- Hipervisores
+- Firewalls
+- Proxies
+- Herramientas de observabilidad
+- Plataformas cloud
+- Software de automatización
 
 ---
 
@@ -121,11 +121,11 @@ Sirve para preguntas como:
 
 ### Qué debe ir aquí
 
-- funciones de red
-- funciones de seguridad
-- funciones de publicación de servicios
-- funciones de observabilidad
-- funciones de continuidad y acceso remoto
+- Funciones de red
+- Funciones de seguridad
+- Funciones de publicación de servicios
+- Funciones de observabilidad
+- Funciones de continuidad y acceso remoto
 
 ---
 
@@ -339,10 +339,10 @@ Una incidencia sobre acceso a la GUI de OPNsense podría usar:
 
 Solo conviene crear una etiqueta nueva si:
 
-- describe algo que todavía no está bien cubierto
-- va a reutilizarse
-- no es un simple sinónimo de otra ya existente
-- encaja claramente en una taxonomía concreta
+- Describe algo que todavía no está bien cubierto
+- Va a reutilizarse
+- No es un simple sinónimo de otra ya existente
+- Encaja claramente en una taxonomía concreta
 
 Antes de crearla, conviene preguntarse:
 
