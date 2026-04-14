@@ -1,5 +1,5 @@
 ---
-title: "Incidencia 001 - Conflicto entre VMware y características de virtualización de Windows"
+title: "Incidencia 01 - Conflicto entre VMware y características de virtualización de Windows"
 i_software:
     - VMware
 i_services:

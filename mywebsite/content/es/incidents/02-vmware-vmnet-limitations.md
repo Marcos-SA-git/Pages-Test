@@ -1,5 +1,5 @@
 ---
- title: "Incidencia 002 - Limitaciones y comportamiento de VMnet en VMware Workstation"
+ title: "Incidencia 02 - Limitaciones y comportamiento de VMnet en VMware Workstation"
 ---
 
 ## Síntoma

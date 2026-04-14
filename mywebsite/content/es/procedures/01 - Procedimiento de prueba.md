@@ -1,5 +1,5 @@
 ---
-title: "Proced. 001 - Procedimiento de prueba"
+title: "Proced. 01 - Procedimiento de prueba"
 p_software:
     - VMware
     - Ubuntu

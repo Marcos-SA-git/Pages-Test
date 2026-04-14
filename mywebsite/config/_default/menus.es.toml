@@ -69,5 +69,5 @@
 
  [[footer]]
   name = "Etiquetas"
-  pageRef = "tags"
+  pageRef = "taxonomies"
   weight = 20

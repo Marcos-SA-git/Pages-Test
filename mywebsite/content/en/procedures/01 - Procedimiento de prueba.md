@@ -1,13 +1,13 @@
 ---
-title: "Proced. 001 - Test procedure"
-software:
+title: "Proced. 01 - Test procedure"
+p_software:
     - VMware
     - Ubuntu
     - OPNsense
-services:
+p_services:
     - DHCP
     - Routing
     - VLANs
-phases:
+p_phases:
     - phase-01
 ---

@@ -1,5 +1,5 @@
 ---
-title: "001 - Esquema de direccionamiento y segmentación inicial"
+title: "01 - Esquema de direccionamiento y segmentación inicial"
 ---
 
 ## Estado

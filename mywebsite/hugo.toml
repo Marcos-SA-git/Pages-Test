@@ -7,6 +7,17 @@ baseURL = "https://localhost:1313/"
 defaultContentLanguage = "es"
 lenguageCode = "es"
 
+[languages]
+  [languages.es]
+    languageName = "Español"
+    weight = 1
+    contentDir = "content/es"
+
+  [languages.en]
+    languageName = "English"
+    weight = 2
+    contentDir = "content/en"
+
 pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
 enableRobotsTXT = true

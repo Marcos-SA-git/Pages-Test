@@ -79,7 +79,7 @@ Las redes siguen el siguiente esquema lógico:
 
 ### Diagrama de arquitectura general
 
-![Diagrama del proyecto](../assets/img/high-level-homelab-architecture.drawio.svg)
+![Diagrama del proyecto](assets/img/high-level-homelab-architecture.drawio.svg)
 
 ---
 

@@ -52,11 +52,11 @@
 # the copyright notice. Configure as per the main menu above.
 
  [[footer]]
-   name = "Tags"
-   pageRef = "tags"
+   name = "About this web"
+   pageRef = "about"
    weight = 10
 
  [[footer]]
-   name = "Categories"
-   pageRef = "categories"
+   name = "Taxonomies"
+   pageRef = "taxonomies"
    weight = 20
