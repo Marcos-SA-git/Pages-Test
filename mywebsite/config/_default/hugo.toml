@@ -44,7 +44,7 @@ enableEmoji = true
   service = "services"
   # Para encontrar funciones técnicas, no productos (dns, dhcp, firewall, nat, routing, proxy, load-balancing, web-server, backup, observability)
   
-  phase = "phases"
+  phasenum = "phasesnum"
   # En qué momento del proyecto (phase-1, phase-2, phase-3, phase-4, ...)
   
   network_area = "network_areas"

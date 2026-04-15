@@ -8,7 +8,7 @@ draft: true
 c_type:
   - phase
 
-phases: []
+phasesnum: []
 software: []
 services: []
 network_areas: []
