@@ -25,6 +25,9 @@ other = "Todos los procedimientos"
 [all_incidents]
 other = "Todas las incidencias"
 
+[all_adrs]
+other = "Todas las decisiones técnicas"
+
 [replicable_procedures_intro]
 other = "Esta sección contiene procedimientos reutilizables, extraídos del proyecto y pensados para repetirse de forma controlada."
 

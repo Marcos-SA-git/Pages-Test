@@ -1,5 +1,6 @@
 ---
 title: "Fases"
+layout: "list"
 ---
 
 - [Fase 0 - Infraestructura](00-infra.md)

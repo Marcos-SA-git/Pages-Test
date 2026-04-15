@@ -7,12 +7,13 @@ title = "Laboratorio de Redes"
   displayName = "Español"
   isoCode = "es"
   rtl = false
-  dateFormat = "02 de January de 2006"
+  dateFormat = "2 January 2006"
   logo = "img/HomeLab.png"
   description = "Manteniendo la Matrix..."
 
 [params.author]
   name = "Marcos Sánchez"
+  email = "marcospersonalmail@gmail.com"
   image = "img/HomeLab.png"
   headline = "Manteniendo la Matrix..."
   bio = "Soy el administrador. Claro que puedo!"

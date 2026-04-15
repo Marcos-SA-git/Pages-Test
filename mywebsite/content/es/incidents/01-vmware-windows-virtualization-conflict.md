@@ -1,11 +1,12 @@
 ---
 title: "Incidencia 01 - Conflicto entre VMware y características de virtualización de Windows"
+summary: "test"
 i_software:
     - VMware
 i_services:
-    -
+
 i_phases:
-    - phase-00
+    - phase-0
 issue_types:
     - virtualización
 ---

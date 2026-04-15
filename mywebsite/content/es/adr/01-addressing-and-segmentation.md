@@ -1,5 +1,29 @@
 ---
 title: "01 - Esquema de direccionamiento y segmentación inicial"
+summary: "Decidir cuáles serían las direcciones de red usadas y su propósito."
+c_type:
+    - decision
+
+a_software:
+    - opnsense
+    - vmware-workstation
+
+a_services:
+    - routing
+    - network-segmentation
+
+a_phases:
+    - phase-0
+
+network_areas:
+    - management
+    - clients
+    - servers
+    - IoT
+    - DMZ
+    - backup
+    - offsite
+    - cloud
 ---
 
 ## Estado
@@ -25,20 +49,21 @@ Si el direccionamiento no se define desde el principio, el crecimiento posterior
 
 Se adopta un esquema basado en subredes /24 dentro del espacio privado 10.0.0.0/8, usando una convención interna donde:
 
-- segundo octeto representa lugar o entorno
-- tercer octeto representa uso o segmento
+- Primer octeto representa la "clase" de red. `10.x.x.x`
+- Segundo octeto representa lugar o entorno. `x.10.x.x`
+- Tercer octeto representa uso, función o segmento. `x.x.10.x`
 
 Se definen inicialmente estas redes:
 
-- 10.10.10.0/24 -> Administración / Gestión
-- 10.10.20.0/24 -> Servidores
-- 10.10.30.0/24 -> Clientes
-- 10.10.40.0/24 -> IoTs
-- 10.10.50.0/24 -> DMZ
-- 10.10.60.0/24 -> Backup
-- 10.20.10.0/24 -> Offsite
-- 10.0.0.0/24 -> Extra
-- 10.30.10.0/24 -> Cloud
+- `10.10.10.0/24` -> Administración / Gestión
+- `10.10.20.0/24` -> Servidores
+- `10.10.30.0/24` -> Clientes
+- `10.10.40.0/24` -> IoTs
+- `10.10.50.0/24` -> DMZ
+- `10.10.60.0/24` -> Backup
+- `10.20.10.0/24` -> Offsite
+- `10.0.0.0/24` -> Extra
+- `10.30.10.0/24` -> Cloud
 
 ## Consecuencias
 
@@ -48,6 +73,7 @@ Se definen inicialmente estas redes:
 - Se facilita la segmentación por función.
 - La documentación y la lectura del entorno son más claras.
 - El diseño es fácilmente ampliable a nodo remoto y cloud.
+- Organización y nomenclatura alineada con una posterior segmentación en VLANs.
 
 ### Negativas
 

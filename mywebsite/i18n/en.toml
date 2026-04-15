@@ -25,5 +25,8 @@ other = "All procedures"
 [all_incidents]
 other = "All incidents"
 
+[all_adrs]
+other = "All technical decisions"
+
 [replicable_procedures_intro]
 other = "This section contains reusable step-by-step procedures extracted from the project."

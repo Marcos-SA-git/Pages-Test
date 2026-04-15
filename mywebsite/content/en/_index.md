@@ -1,5 +1,5 @@
 ---
-title: "Enterprise testing HomeLab"
+title: "Enterprise Testing HomeLab"
 ---
 
 ## Porpuse of this project

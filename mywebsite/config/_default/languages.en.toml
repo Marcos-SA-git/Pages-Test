@@ -14,7 +14,7 @@ title = "Networking Lab"
 [params.author]
   name = "Marcos Sánchez"
   email = "marcospersonalmail@gmail.com"
-  image = "img/blowfish_logo.png"
+  image = "img/HomeLab.png"
   headline = "Maintaning the Matrix..."
   bio = "I'm the SysAdmin. I can do it."
   links = [
