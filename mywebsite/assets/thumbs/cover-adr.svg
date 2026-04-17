@@ -1,0 +1,244 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1084" height="322" viewBox="0 0 1084 322" fill="none" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <filter id="glowSoft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="b"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <filter id="glowStrong" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="7" result="b1"></feGaussianBlur>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.8" result="b2"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="b1"></feMergeNode>
+        <feMergeNode in="b2"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <filter id="pulseGlow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="6" result="b1"></feGaussianBlur>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.6" result="b2"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="b1"></feMergeNode>
+        <feMergeNode in="b2"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <linearGradient id="cardBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#123550" stop-opacity="0.78"></stop>
+      <stop offset="1" stop-color="#0b1d2f" stop-opacity="0.55"></stop>
+    </linearGradient>
+    <linearGradient id="cardGreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#123b3b" stop-opacity="0.78"></stop>
+      <stop offset="1" stop-color="#0b2323" stop-opacity="0.55"></stop>
+    </linearGradient>
+    <linearGradient id="cardPurple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1f4f" stop-opacity="0.78"></stop>
+      <stop offset="1" stop-color="#171029" stop-opacity="0.55"></stop>
+    </linearGradient>
+    <linearGradient id="cardGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b2a08" stop-opacity="0.82"></stop>
+      <stop offset="1" stop-color="#231905" stop-opacity="0.62"></stop>
+    </linearGradient>
+
+    <linearGradient id="pulseBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7ddcff" stop-opacity="0"></stop>
+      <stop offset="0.22" stop-color="#a6ecff" stop-opacity="0.28"></stop>
+      <stop offset="0.45" stop-color="#d7f8ff" stop-opacity="0.9"></stop>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="1"></stop>
+      <stop offset="0.55" stop-color="#d7f8ff" stop-opacity="0.9"></stop>
+      <stop offset="0.78" stop-color="#a6ecff" stop-opacity="0.28"></stop>
+      <stop offset="1" stop-color="#7ddcff" stop-opacity="0"></stop>
+    </linearGradient>
+    <linearGradient id="pulseGreen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#63ffd8" stop-opacity="0"></stop>
+      <stop offset="0.22" stop-color="#9affea" stop-opacity="0.28"></stop>
+      <stop offset="0.45" stop-color="#d8fff6" stop-opacity="0.9"></stop>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="1"></stop>
+      <stop offset="0.55" stop-color="#d8fff6" stop-opacity="0.9"></stop>
+      <stop offset="0.78" stop-color="#9affea" stop-opacity="0.28"></stop>
+      <stop offset="1" stop-color="#63ffd8" stop-opacity="0"></stop>
+    </linearGradient>
+    <linearGradient id="pulsePurple" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b076ff" stop-opacity="0"></stop>
+      <stop offset="0.22" stop-color="#d0a8ff" stop-opacity="0.28"></stop>
+      <stop offset="0.45" stop-color="#efddff" stop-opacity="0.9"></stop>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="1"></stop>
+      <stop offset="0.55" stop-color="#efddff" stop-opacity="0.9"></stop>
+      <stop offset="0.78" stop-color="#d0a8ff" stop-opacity="0.28"></stop>
+      <stop offset="1" stop-color="#b076ff" stop-opacity="0"></stop>
+    </linearGradient>
+    <linearGradient id="pulseGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffd44d" stop-opacity="0"></stop>
+      <stop offset="0.22" stop-color="#ffe27d" stop-opacity="0.28"></stop>
+      <stop offset="0.45" stop-color="#fff3ba" stop-opacity="0.92"></stop>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="1"></stop>
+      <stop offset="0.55" stop-color="#fff3ba" stop-opacity="0.92"></stop>
+      <stop offset="0.78" stop-color="#ffe27d" stop-opacity="0.28"></stop>
+      <stop offset="1" stop-color="#ffd44d" stop-opacity="0"></stop>
+    </linearGradient>
+
+    <symbol id="inputCardBlue">
+      <rect width="120" height="60" rx="10" fill="url(#cardBlue)" stroke="#43b9ff" stroke-opacity="0.92" stroke-width="1.3"></rect>
+      <rect x="12" y="12" width="32" height="5" rx="2.5" fill="#d6f4ff" fill-opacity="0.9"></rect>
+      <rect x="12" y="24" width="70" height="4" rx="2" fill="#9fdcff" fill-opacity="0.42"></rect>
+      <rect x="12" y="34" width="58" height="4" rx="2" fill="#9fdcff" fill-opacity="0.28"></rect>
+      <rect x="12" y="48" width="28" height="3" rx="1.5" fill="#9fdcff" fill-opacity="0.45"></rect>
+      <rect x="48" y="48" width="22" height="3" rx="1.5" fill="#9fdcff" fill-opacity="0.28"></rect>
+    </symbol>
+    <symbol id="inputCardGreen">
+      <rect width="120" height="60" rx="10" fill="url(#cardGreen)" stroke="#27e6c0" stroke-opacity="0.92" stroke-width="1.3"></rect>
+      <rect x="12" y="12" width="32" height="5" rx="2.5" fill="#e1fff7" fill-opacity="0.9"></rect>
+      <rect x="12" y="24" width="70" height="4" rx="2" fill="#95ffe6" fill-opacity="0.42"></rect>
+      <rect x="12" y="34" width="58" height="4" rx="2" fill="#95ffe6" fill-opacity="0.28"></rect>
+      <rect x="12" y="48" width="28" height="3" rx="1.5" fill="#95ffe6" fill-opacity="0.45"></rect>
+      <rect x="48" y="48" width="22" height="3" rx="1.5" fill="#95ffe6" fill-opacity="0.28"></rect>
+    </symbol>
+    <symbol id="inputCardPurple">
+      <rect width="120" height="60" rx="10" fill="url(#cardPurple)" stroke="#ba7dff" stroke-opacity="0.92" stroke-width="1.3"></rect>
+      <rect x="12" y="12" width="32" height="5" rx="2.5" fill="#f0e2ff" fill-opacity="0.9"></rect>
+      <rect x="12" y="24" width="70" height="4" rx="2" fill="#dcb8ff" fill-opacity="0.42"></rect>
+      <rect x="12" y="34" width="58" height="4" rx="2" fill="#dcb8ff" fill-opacity="0.28"></rect>
+      <rect x="12" y="48" width="28" height="3" rx="1.5" fill="#dcb8ff" fill-opacity="0.45"></rect>
+      <rect x="48" y="48" width="22" height="3" rx="1.5" fill="#dcb8ff" fill-opacity="0.28"></rect>
+    </symbol>
+    <symbol id="adrCard">
+      <rect width="120" height="90" rx="12" fill="url(#cardGold)" stroke="#ffcc3d" stroke-opacity="0.96" stroke-width="1.5"></rect>
+      <rect x="36" y="16" width="48" height="28" rx="5" fill="#1e1807" stroke="#ffd44d" stroke-opacity="0.9" stroke-width="1.1"></rect>
+      <rect x="48" y="26" width="24" height="8" rx="4" fill="#ffe589" fill-opacity="0.92"></rect>
+      <rect x="20" y="55" width="80" height="6" rx="3" fill="#fff1b1" fill-opacity="0.9"></rect>
+      <rect x="30" y="66" width="60" height="5" rx="2.5" fill="#ffd86b" fill-opacity="0.38"></rect>
+      <rect x="24" y="78" width="72" height="2.5" rx="1.25" fill="#ffd86b" fill-opacity="0.22"></rect>
+    </symbol>
+
+    <path id="flowTop" d="M420 120 C 470 120, 505 124, 545 136 S 615 156, 680 158 C 698 158, 714 158, 730 159"></path>
+    <path id="flowMid" d="M420 165 C 474 165, 510 165, 552 164 S 620 162, 680 161 C 698 161, 714 161, 730 161"></path>
+    <path id="flowBot" d="M420 210 C 470 210, 505 206, 545 194 S 615 166, 680 164 C 698 164, 714 164, 730 163"></path>
+    <path id="finalOut" d="M850 161 C 880 161, 910 161, 950 161"></path>
+
+    <path id="rightMain" d="M 889.953 165.933 C 1048.73 165.933 1207.5 165.933 1419.2 165.933"></path>
+    <path id="rightTop" d="M 1283.856 187.987 C 1328.97 180.636 1374.085 173.284 1419.199 165.933"></path>
+    <path id="rightBottom" d="M 1283.857 143.968 C 1328.971 151.29 1374.086 158.611 1419.2 165.933"></path>
+
+    <mask id="mTop">
+      <rect width="1084" height="322" fill="black"></rect>
+      <rect x="-54" y="-6" width="108" height="12" rx="6" fill="url(#pulseBlue)">
+        <animateMotion dur="2.7s" begin="0s" repeatCount="indefinite" calcMode="linear" keyTimes="0;1" keyPoints="0;1" rotate="auto">
+          <mpath href="#flowTop"></mpath>
+        </animateMotion>
+      </rect>
+    </mask>
+    <mask id="mMid">
+      <rect width="1084" height="322" fill="black"></rect>
+      <rect x="-54" y="-6" width="108" height="12" rx="6" fill="url(#pulseGreen)">
+        <animateMotion dur="2.7s" begin="0s" repeatCount="indefinite" calcMode="linear" keyTimes="0;1" keyPoints="0;1" rotate="auto">
+          <mpath href="#flowMid"></mpath>
+        </animateMotion>
+      </rect>
+    </mask>
+    <mask id="mBot">
+      <rect width="1084" height="322" fill="black"></rect>
+      <rect x="-54" y="-6" width="108" height="12" rx="6" fill="url(#pulsePurple)">
+        <animateMotion dur="2.7s" begin="0s" repeatCount="indefinite" calcMode="linear" keyTimes="0;1" keyPoints="0;1" rotate="auto">
+          <mpath href="#flowBot"></mpath>
+        </animateMotion>
+      </rect>
+    </mask>
+    <mask id="mFinal">
+      <rect width="1084" height="322" fill="black"></rect>
+      <rect x="-90" y="-8" width="180" height="16" rx="8" fill="url(#pulseGold)">
+        <animateMotion dur="2.2s" begin="-0.2s" repeatCount="indefinite" calcMode="linear" keyTimes="0;1" keyPoints="0;1" rotate="auto">
+          <mpath href="#finalOut"></mpath>
+        </animateMotion>
+      </rect>
+    </mask>
+
+    <mask id="mRightMain">
+      <rect width="1084" height="322" fill="black"></rect>
+      <rect x="-110" y="-10" width="220" height="20" rx="10" fill="url(#pulseGold)">
+        <animateMotion dur="2.6s" begin="0s" repeatCount="indefinite" calcMode="linear" keyTimes="0;1" keyPoints="0;1" rotate="auto">
+          <mpath href="#rightMain"></mpath>
+        </animateMotion>
+      </rect>
+    </mask>
+    <mask id="mRightTop">
+      <rect width="1084" height="322" fill="black"></rect>
+      <rect x="-60" y="-8" width="120" height="16" rx="8" fill="url(#pulseGold)">
+        <animateMotion dur="1.7s" begin="0s" repeatCount="indefinite" calcMode="linear" keyTimes="0;1" keyPoints="0;1" rotate="auto">
+          <mpath href="#rightTop"></mpath>
+        </animateMotion>
+      </rect>
+    </mask>
+    <mask id="mRightBottom">
+      <rect width="1084" height="322" fill="black"></rect>
+      <rect x="-60" y="-8" width="120" height="16" rx="8" fill="url(#pulseGold)">
+        <animateMotion dur="1.7s" begin="0s" repeatCount="indefinite" calcMode="linear" keyTimes="0;1" keyPoints="0;1" rotate="auto">
+          <mpath href="#rightBottom"></mpath>
+        </animateMotion>
+      </rect>
+    </mask>
+
+    <!-- añadido: faltaba el cuarto trazo derecho, el highlight fino del tronco principal -->
+    <mask id="mRightMainThin">
+      <rect width="1084" height="322" fill="black"></rect>
+      <rect x="-90" y="-6" width="180" height="12" rx="6" fill="url(#pulseGold)">
+        <animateMotion dur="2.6s" begin="0s" repeatCount="indefinite" calcMode="linear" keyTimes="0;1" keyPoints="0;1" rotate="auto">
+          <mpath href="#rightMain"></mpath>
+        </animateMotion>
+      </rect>
+    </mask>
+
+    <bx:export>
+      <bx:file format="svg" path="Sin título.svg"></bx:file>
+    </bx:export>
+  </defs>
+
+  <g filter="url(#glowSoft)" transform="matrix(1, 0, 0, 1, -51.937077, -6.492135)">
+    <g transform="translate(300 90)">
+      <use href="#inputCardBlue"></use>
+    </g>
+    <g transform="translate(300 135)">
+      <use href="#inputCardGreen"></use>
+    </g>
+    <g transform="translate(300 180)">
+      <use href="#inputCardPurple"></use>
+    </g>
+  </g>
+
+  <g filter="url(#glowSoft)" transform="matrix(0.699591, 0, 0, 1, 74.234818, -6.492135)" style="">
+    <path d="M420 120 C 470 120, 505 124, 545 136 S 615 156, 680 158 C 698 158, 714 158, 730 159" stroke="#33b8ff" stroke-opacity="0.94" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M420 165 C 474 165, 510 165, 552 164 S 620 162, 680 161 C 698 161, 714 161, 730 161" stroke="#29e2bd" stroke-opacity="0.96" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M420 210 C 470 210, 505 206, 545 194 S 615 166, 680 164 C 698 164, 714 164, 730 163" stroke="#b678ff" stroke-opacity="0.94" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M420 120 C 470 120, 505 124, 545 136 S 615 156, 680 158 C 698 158, 714 158, 730 159" stroke="#d4f4ff" stroke-opacity="0.68" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M420 165 C 474 165, 510 165, 552 164 S 620 162, 680 161 C 698 161, 714 161, 730 161" stroke="#dcfff7" stroke-opacity="0.68" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M420 210 C 470 210, 505 206, 545 194 S 615 166, 680 164 C 698 164, 714 164, 730 163" stroke="#f0ddff" stroke-opacity="0.68" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+
+    <path d="M 889.953 165.933 C 1048.73 165.933 1207.5 165.933 1419.2 165.933" stroke="#ffcf43" stroke-opacity="1" stroke-width="15" stroke-linecap="round" style=""></path>
+    <path stroke="#ffcf43" stroke-opacity="0.98" stroke-width="15" stroke-linecap="round" style="transform-box: fill-box; transform-origin: 50% 50%;" transform="matrix(1, 0, 0, 1, 0.001, 0)" d="M 1283.856 187.987 C 1328.97 180.636 1374.085 173.284 1419.199 165.933"></path>
+    <path stroke="#ffcf43" stroke-opacity="0.98" stroke-width="7.8" stroke-linecap="round" style="stroke-width: 15; transform-origin: 1344.03px 256.3px;" d="M 1283.857 143.968 C 1328.971 151.29 1374.086 158.611 1419.2 165.933"></path>
+  </g>
+
+  <g filter="url(#pulseGlow)" transform="matrix(0.699591, 0, 0, 1, 74.234818, -6.492135)">
+    <use href="#flowTop" stroke="url(#pulseBlue)" stroke-width="6.2" stroke-linecap="round" stroke-linejoin="round" mask="url(#mTop)"></use>
+    <use href="#flowMid" stroke="url(#pulseGreen)" stroke-width="6.2" stroke-linecap="round" stroke-linejoin="round" mask="url(#mMid)"></use>
+    <use href="#flowBot" stroke="url(#pulsePurple)" stroke-width="6.2" stroke-linecap="round" stroke-linejoin="round" mask="url(#mBot)"></use>
+    <use href="#finalOut" stroke="url(#pulseGold)" stroke-width="10" stroke-linecap="round" mask="url(#mFinal)"></use>
+
+    <use href="#rightMain" stroke="url(#pulseGold)" stroke-width="18" stroke-linecap="round" mask="url(#mRightMain)"></use>
+    <use href="#rightTop" stroke="url(#pulseGold)" stroke-width="18" stroke-linecap="round" mask="url(#mRightTop)"></use>
+    <use href="#rightBottom" stroke="url(#pulseGold)" stroke-width="10.5" stroke-linecap="round" mask="url(#mRightBottom)"></use>
+
+    <!-- añadido: pulse también para el trazo fino/follow-up del tronco -->
+    <use href="#rightMain" stroke="url(#pulseGold)" stroke-width="7.8" stroke-linecap="round" mask="url(#mRightMainThin)"></use>
+  </g>
+
+  <g filter="url(#glowStrong)" transform="matrix(1, 0, 0, 1, -152.07222, 0.137842)">
+    <g transform="translate(730 116)">
+      <use href="#adrCard"></use>
+    </g>
+  </g>
+</svg>

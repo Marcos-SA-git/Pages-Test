@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1084" height="322" viewBox="0 0 1084 322" fill="none">
+  <g transform="translate(-60 0)">
+  <defs>
+    <filter id="glowSoft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowStrong" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="6" result="b1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.4" result="b2"/>
+      <feMerge><feMergeNode in="b1"/><feMergeNode in="b2"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <linearGradient id="templateFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2b1d4d" stop-opacity="0.84"/>
+      <stop offset="100%" stop-color="#171028" stop-opacity="0.62"/>
+    </linearGradient>
+    <linearGradient id="processFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#123551" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#0a1b2b" stop-opacity="0.58"/>
+    </linearGradient>
+    <linearGradient id="outputFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#123f2a" stop-opacity="0.86"/>
+      <stop offset="100%" stop-color="#0b2418" stop-opacity="0.62"/>
+    </linearGradient>
+
+    <linearGradient id="pulsePurple" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b076ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#b076ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="pulseBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7ddcff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#7ddcff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="pulseGreen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#62ffab" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#62ffab" stop-opacity="0"/>
+    </linearGradient>
+
+    <symbol id="templateCard">
+      <rect width="132" height="84" rx="12" fill="url(#templateFill)" stroke="#c38aff" stroke-opacity="0.9" stroke-width="1.4"/>
+      <rect x="16" y="14" width="34" height="6" rx="3" fill="#f1e5ff" fill-opacity="0.92"/>
+      <rect x="16" y="28" width="78" height="4.5" rx="2.25" fill="#d7b9ff" fill-opacity="0.38"/>
+      <rect x="16" y="38" width="64" height="4.5" rx="2.25" fill="#d7b9ff" fill-opacity="0.24"/>
+      <rect x="16" y="54" width="48" height="10" rx="5" fill="#24163f" stroke="#ddbfff" stroke-opacity="0.28"/>
+      <rect x="74" y="54" width="18" height="10" rx="5" fill="#f1e5ff" fill-opacity="0.16"/>
+    </symbol>
+
+    <symbol id="processNode">
+      <rect width="112" height="68" rx="12" fill="url(#processFill)" stroke="#4cc3ff" stroke-opacity="0.9" stroke-width="1.3"/>
+      <rect x="16" y="14" width="32" height="5" rx="2.5" fill="#def7ff" fill-opacity="0.9"/>
+      <rect x="16" y="26" width="62" height="4" rx="2" fill="#a6def8" fill-opacity="0.36"/>
+      <rect x="16" y="36" width="52" height="4" rx="2" fill="#a6def8" fill-opacity="0.22"/>
+      <path d="M78 20 L92 34 L78 48" stroke="#dff8ff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+    <symbol id="outputCard">
+      <rect width="104" height="62" rx="11" fill="url(#outputFill)" stroke="#6dffad" stroke-opacity="0.92" stroke-width="1.3"/>
+      <rect x="14" y="12" width="28" height="5" rx="2.5" fill="#e2fff1" fill-opacity="0.92"/>
+      <rect x="14" y="24" width="60" height="4" rx="2" fill="#b6ffd5" fill-opacity="0.36"/>
+      <rect x="14" y="34" width="48" height="4" rx="2" fill="#b6ffd5" fill-opacity="0.24"/>
+      <path d="M74 21 L80 27 L91 16" fill="none" stroke="#d8ffe7" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- ultra compact paths -->
+    <path id="tIn" d="M420 161 H 500"/>
+    <path id="tToCore" d="M590 161 H 640"/>
+    <path id="tOutTop" d="M730 161 C 745 161, 760 130, 775 110 S 810 85, 830 85"/>
+    <path id="tOutMid" d="M730 161 H 830"/>
+    <path id="tOutBot" d="M730 161 C 745 161, 760 192, 775 212 S 810 237, 830 237"/>
+
+    <!-- masks -->
+    <mask id="mIn"><rect width="1084" height="322" fill="black"/><rect x="-54" y="-6" width="108" height="12" rx="6" fill="url(#pulsePurple)"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#tIn"/></animateMotion></rect></mask>
+    <mask id="mToCore"><rect width="1084" height="322" fill="black"/><rect x="-40" y="-5" width="80" height="10" rx="5" fill="url(#pulseBlue)"><animateMotion dur="1.4s" repeatCount="indefinite"><mpath href="#tToCore"/></animateMotion></rect></mask>
+    <mask id="mOutTop"><rect width="1084" height="322" fill="black"/><rect x="-56" y="-6" width="112" height="12" rx="6" fill="url(#pulseGreen)"><animateMotion dur="2s" repeatCount="indefinite"><mpath href="#tOutTop"/></animateMotion></rect></mask>
+    <mask id="mOutMid"><rect width="1084" height="322" fill="black"/><rect x="-56" y="-6" width="112" height="12" rx="6" fill="url(#pulseGreen)"><animateMotion dur="2s" repeatCount="indefinite"><mpath href="#tOutMid"/></animateMotion></rect></mask>
+    <mask id="mOutBot"><rect width="1084" height="322" fill="black"/><rect x="-56" y="-6" width="112" height="12" rx="6" fill="url(#pulseGreen)"><animateMotion dur="2s" repeatCount="indefinite"><mpath href="#tOutBot"/></animateMotion></rect></mask>
+  </defs>
+
+  <!-- nodes tighter -->
+  <g filter="url(#glowStrong)">
+    <g transform="translate(300 119)"><use href="#templateCard"/></g>
+    <g transform="translate(490 127)"><use href="#processNode"/></g>
+    <g transform="translate(640 127)"><use href="#processNode"/></g>
+    <g transform="translate(800 65)"><use href="#outputCard"/></g>
+    <g transform="translate(800 130)"><use href="#outputCard"/></g>
+    <g transform="translate(800 195)"><use href="#outputCard"/></g>
+  </g>
+
+  <!-- base lines -->
+  <g filter="url(#glowSoft)">
+    <use href="#tIn" stroke="#b678ff" stroke-width="5" stroke-linecap="round"/>
+    <use href="#tToCore" stroke="#39bfff" stroke-width="4.8" stroke-linecap="round"/>
+    <use href="#tOutTop" stroke="#5eff93" stroke-width="4.6" stroke-linecap="round"/>
+    <use href="#tOutMid" stroke="#5eff93" stroke-width="4.8" stroke-linecap="round"/>
+    <use href="#tOutBot" stroke="#5eff93" stroke-width="4.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- animations -->
+  <g filter="url(#glowStrong)">
+    <use href="#tIn" stroke="url(#pulsePurple)" stroke-width="5.4" mask="url(#mIn)" stroke-linecap="round"/>
+    <use href="#tToCore" stroke="url(#pulseBlue)" stroke-width="5.2" mask="url(#mToCore)" stroke-linecap="round"/>
+    <use href="#tOutTop" stroke="url(#pulseGreen)" stroke-width="5" mask="url(#mOutTop)" stroke-linecap="round"/>
+    <use href="#tOutMid" stroke="url(#pulseGreen)" stroke-width="5.2" mask="url(#mOutMid)" stroke-linecap="round"/>
+    <use href="#tOutBot" stroke="url(#pulseGreen)" stroke-width="5" mask="url(#mOutBot)" stroke-linecap="round"/>
+  </g>
+
+  </g>
+</svg>

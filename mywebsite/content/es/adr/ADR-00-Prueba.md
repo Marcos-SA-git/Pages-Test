@@ -1,9 +1,8 @@
 ---
-title: '{{ replace .File.ContentBaseName `-` ` ` | title }}'
+title: 'ADR 00 Prueba'
 description: ''
-summary: ''
-slug: '{{ .File.ContentBaseName }}'
-date: '{{ .Date }}'
+slug: 'ADR-00-Prueba'
+date: '2026-04-17T02:30:08+02:00'
 draft: true
 
 c_type:

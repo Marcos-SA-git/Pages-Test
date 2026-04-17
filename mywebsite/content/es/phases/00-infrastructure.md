@@ -1,16 +1,15 @@
 ---
-title: '{{ replace .File.ContentBaseName `-` ` ` | title }}'
+title: 'Fase 00 - Infraestructura'
 description: ''
-summary: ''
-slug: '{{ .File.ContentBaseName }}'
-date: '{{ .Date }}'
+slug: '00-infrastructure'
+date: '2026-04-16T20:00:18+02:00'
 draft: true
 
 c_type:
-  - phase
+  - Fases
 
-phasesnum: []
-software: []
+phasesnum: [Fase 00]
+software: [vmware, ]
 services: []
 network_areas: []
 ---

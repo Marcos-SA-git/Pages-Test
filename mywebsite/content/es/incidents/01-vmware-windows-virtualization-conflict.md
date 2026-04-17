@@ -6,7 +6,7 @@ i_software:
 i_services:
 
 i_phases:
-    - phase-0
+    - Fase-0
 issue_types:
     - virtualización
 ---

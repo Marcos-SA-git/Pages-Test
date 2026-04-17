@@ -1,6 +1,7 @@
 ---
 title: '{{ replace .File.ContentBaseName `-` ` ` | title }}'
 description: ''
+summary: ''
 slug: '{{ .File.ContentBaseName }}'
 date: '{{ .Date }}'
 draft: true

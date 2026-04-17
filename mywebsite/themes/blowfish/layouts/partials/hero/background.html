@@ -1,69 +1,71 @@
+{{ $page := . }}
 {{ $disableImageOptimization := site.Store.Get "disableImageOptimization" }}
 
 {{ $useDefault := false }}
-{{ $featured := "" }}
-{{ $featuredURL := "" }}
-{{ with .Params.featureimage }}
+{{ $background := "" }}
+{{ $backgroundURL := "" }}
+
+{{/* 1) backgroundimage explícita en front matter */}}
+{{ with $page.Params.backgroundimage }}
   {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
-    {{ if site.Params.hotlinkFeatureImage }}
-      {{ $featuredURL = . }}
-    {{ else }}
-      {{ $featured = resources.GetRemote . }}
-    {{ end }}
+    {{ $backgroundURL = . }}
   {{ else }}
-    {{ $featured = resources.Get . }}
+    {{ $background = $page.Resources.GetMatch . }}
+    {{ if not $background }}
+      {{ $background = resources.Get . }}
+    {{ end }}
   {{ end }}
 {{ end }}
 
-{{ if not (or $featured $featuredURL) }}
-  {{ $images := .Resources.ByType "image" }}
-  {{ range slice "*background*" "*feature*" "*cover*" "*thumbnail*" }}
-    {{ if not $featured }}{{ $featured = $images.GetMatch . }}{{ end }}
-  {{ end }}
+{{/* 2) Si no hay background explícito, buscar recurso background* */}}
+{{ if not (or $background $backgroundURL) }}
+  {{ $images := $page.Resources.ByType "image" }}
+  {{ $background = $images.GetMatch "*background*" }}
 {{ end }}
 
-{{ if not (or $featured $featuredURL) }}
+{{/* 3) Fallback global: defaultBackgroundImage */}}
+{{ if not (or $background $backgroundURL) }}
   {{ $default := site.Store.Get "defaultBackgroundImage" }}
   {{ if $default.url }}
-    {{ $featuredURL = $default.url }}
+    {{ $backgroundURL = $default.url }}
     {{ $useDefault = true }}
   {{ else if $default.obj }}
-    {{ $featured = $default.obj }}
+    {{ $background = $default.obj }}
     {{ $useDefault = true }}
   {{ end }}
 {{ end }}
 
 {{/* generate image URL if not hotlink */}}
-{{ if not $featuredURL }}
-  {{ with $featured }}
-    {{ $featuredURL = .RelPermalink }}
+{{ if not $backgroundURL }}
+  {{ with $background }}
+    {{ $backgroundURL = .RelPermalink }}
     {{ if not (or $disableImageOptimization (eq .MediaType.SubType "svg")) }}
       {{ $size := site.Store.Get "backgroundImageWidth" }}
-      {{ $featuredURL = (.Resize $size).RelPermalink }}
+      {{ $backgroundURL = (.Resize $size).RelPermalink }}
     {{ end }}
   {{ end }}
 {{ end }}
 
-{{ $isParentList := eq (.Scratch.Get "scope") "list" }}
-{{ $shouldBlur := $.Params.layoutBackgroundBlur | default (or
-  (and ($.Site.Params.article.layoutBackgroundBlur | default true) (not $isParentList))
-  (and ($.Site.Params.list.layoutBackgroundBlur | default true) ($isParentList))
+{{ $isParentList := eq ($page.Scratch.Get "scope") "list" }}
+{{ $shouldBlur := $page.Params.layoutBackgroundBlur | default (or
+  (and ($page.Site.Params.article.layoutBackgroundBlur | default true) (not $isParentList))
+  (and ($page.Site.Params.list.layoutBackgroundBlur | default true) ($isParentList))
   )
 }}
-{{ $shouldAddHeaderSpace := $.Params.layoutBackgroundHeaderSpace | default (or
-  (and ($.Site.Params.article.layoutBackgroundHeaderSpace | default true) (not $isParentList))
-  (and ($.Site.Params.list.layoutBackgroundHeaderSpace | default true) ($isParentList))
+{{ $shouldAddHeaderSpace := $page.Params.layoutBackgroundHeaderSpace | default (or
+  (and ($page.Site.Params.article.layoutBackgroundHeaderSpace | default true) (not $isParentList))
+  (and ($page.Site.Params.list.layoutBackgroundHeaderSpace | default true) ($isParentList))
   )
 }}
 
-{{- with $featuredURL -}}
+{{- with $backgroundURL -}}
   {{ if $shouldAddHeaderSpace | default true }}
     <div id="hero" class="h-[150px] md:h-[200px]"></div>
   {{ end }}
   <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
     {{ $style := "" }}
     {{ $defaultPosition := cond $useDefault site.Params.imagePosition false }}
-    {{ with $.Params.imagePosition | default $defaultPosition }}
+    {{ with $page.Params.imagePosition | default $defaultPosition }}
       {{ $style = printf "object-position: %s;" . }}
     {{ end }}
     <img
@@ -86,7 +88,7 @@
       id="background-blur"
       class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-xl bg-neutral-100/75 dark:bg-neutral-800/60"></div>
     {{ $backgroundBlur := resources.Get "js/background-blur.js" }}
-    {{ $backgroundBlur = $backgroundBlur | resources.Minify | resources.Fingerprint ($.Site.Params.fingerprintAlgorithm | default "sha512") }}
+    {{ $backgroundBlur = $backgroundBlur | resources.Minify | resources.Fingerprint ($page.Site.Params.fingerprintAlgorithm | default "sha512") }}
     <script
       type="text/javascript"
       src="{{ $backgroundBlur.RelPermalink }}"

@@ -1,5 +1,7 @@
 ---
 title: "Phases"
+cascade:
+    - featureimage: "thumbs/cover-phases.svg"
 ---
 
 - [Phase 0 - Infrastructure](00-infra.md)
