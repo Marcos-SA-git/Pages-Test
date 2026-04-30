@@ -7,7 +7,7 @@ Debido a que este proyecto está actualmente en desarrollo, lo descrito  a conti
 ## Fase 0 - Infraestructura
 
 - Preparación del entorno para usar VMware Workstation.
-- Creación de redes virtuales (VLANs) separadas por función. ([Más info](../arch/_index.md))
+- Creación de redes (L3) separadas por función. ([Más info](./_index.md#planteamiento-de-la-red))
 - Búsqueda de ISOs y asignación de recursos para las máquinas virtuales.
 
 ## Fase 1 — Configuración inicial

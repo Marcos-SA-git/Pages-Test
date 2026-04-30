@@ -1,18 +1,20 @@
 ---
 title: '{{ replace .File.ContentBaseName `-` ` ` | title }}'
-description: ''
 summary: ''
-slug: '{{ .File.ContentBaseName }}'
 date: '{{ .Date }}'
 draft: true
 
 c_type:
-  - phase
+    - phase
 
-phasesnum: []
-software: []
-services: []
-network_areas: []
+phasesnum: 
+    - 
+software:
+    - 
+services:
+    - 
+network_areas:
+    - 
 ---
 
 ## Objetivo
