@@ -129,7 +129,7 @@ Sirve para preguntas como:
 
 ---
 
-## 3. `kind`
+## 3. `c_type`
 
 ### Qué representa
 
@@ -285,7 +285,7 @@ Su objetivo es servir de referencia rápida para no inventar etiquetas nuevas si
 - `restore`
 - `load-testing`
 
-## Kind
+## C_type
 
 - `overview`
 - `phase`
@@ -319,7 +319,7 @@ Un procedimiento para configurar Unbound como DNS principal podría usar:
 
 - software: `opnsense`, `unbound`
 - services: `dns`
-- kind: `procedure`
+- c_type: `procedure`
 - phase: `phase-2`
 - network_areas: `clients`, `management`
 
@@ -329,7 +329,7 @@ Una incidencia sobre acceso a la GUI de OPNsense podría usar:
 
 - software: `opnsense`
 - services: `firewall`, `routing`
-- kind: `incident`
+- c_type: `incident`
 - phase: `phase-2`
 - network_areas: `management`
 
@@ -359,7 +359,7 @@ La clasificación del proyecto se apoya en cinco ideas principales:
 
 - **software**: con qué herramienta
 - **services**: para qué función
-- **kind**: qué tipo de documento es
+- **c_type**: qué tipo de documento es
 - **phase**: en qué etapa del proyecto encaja
 - **network_areas**: a qué zona del laboratorio afecta
 

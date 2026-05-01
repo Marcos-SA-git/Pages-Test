@@ -26,10 +26,6 @@ network_areas:
     - cloud
 ---
 
-## Estado
-
-Aceptado
-
 ## Contexto
 
 El laboratorio necesita crecer de forma progresiva hacia una arquitectura con múltiples zonas:
@@ -50,8 +46,9 @@ Si el direccionamiento no se define desde el principio, el crecimiento posterior
 Se adopta un esquema basado en subredes /24 dentro del espacio privado 10.0.0.0/8, usando una convención interna donde:
 
 - Primer octeto representa la "clase" de red. `10.x.x.x`
-- Segundo octeto representa lugar o entorno. `x.10.x.x`
-- Tercer octeto representa uso, función o segmento. `x.x.10.x`
+- Segundo octeto representa lugar o entorno. `x.#0.x.x`
+- Tercer octeto representa uso, función o segmento. `x.x.#0.x`
+- Cuarto octeto representa los hosts de esa subred. `x.x.x.1-254`
 
 Se definen inicialmente estas redes:
 

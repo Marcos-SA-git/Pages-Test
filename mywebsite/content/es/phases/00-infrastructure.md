@@ -2,7 +2,7 @@
 title: 'Fase 0 - Infraestructura'
 summary: 'Preparación inicial del entorno de virtualización, redes base y host local del laboratorio.'
 date: '2026-04-16T20:00:18+02:00'
-draft: true
+draft: false
 
 c_type:
     - Fases
@@ -42,7 +42,7 @@ Se ha optado por VMware Workstation Pro por su uso extendido en entornos profesi
 
 ### Segmentación inicial de red
 
-Dentro de la configuración de VMware, en el editor de redes virtuales de VMware, definimos los siguientes adaptadores de red con el siguiente rango de red y descripción.
+Dentro de la configuración de VMware, en el editor de redes virtuales de VMware, definimos los siguientes adaptadores de red con el siguiente rango de red y descripción. (Véase [ADR 01](../adr/01-addressing-and-segmentation.md))
 
 - `10.10.10.0/24` -> Administración / Gestión
 - `10.10.20.0/24` -> Servidores
@@ -70,7 +70,7 @@ Estos segmentos no tendrán DHCP gestionado por VMware, ya que la asignación de
 
 ## Problemas encontrados y aprendizajes
 
-**Problema:** Las interfaces de red instaladas por defecto de VMware están sujetas a ciertas propiedades dentro del software que limitan la personalización.
+**Problema:** Las interfaces de red instaladas por defecto de VMware están sujetas a ciertas propiedades dentro del software que limitan la personalización. (Véase [Incid. 01](../incidents/01-vmware-net-limitations.md))
 
 **Aprendizaje:** Los adaptadores configurados por defecto de VMware poseen roles reservados y no conviene forzarlos o cambiarlos para cumplir otras funciones. Para desarrollar una arquitectura limpia y completamente personalizada se optó por crear adaptadores de red nuevos y controlados.
 
@@ -92,8 +92,6 @@ Crear el primer entorno virtual con conectividad básica:
 - Configurar routing y firewall para permitir la conexión entre todos los elementos.
 - Desplegar en el servidor una web y verificar el correcto acceso desde el cliente.
 
-## QUITAR DE AQUÍ
+---
 
-**Problema:** Se identificó un [conflicto entre Windows 11 y VMware](../incidents/01-vmware-windows-virtualization-conflict.md), ya que algunas funciones de seguridad de Windows basadas en virtualización impedían que VMware accediera correctamente a las capacidades de virtualización del sistema.
-
-**Aprendizaje:** Algunas protecciones de Windows y VMware pueden competir por el control de la virtualización. Para este laboratorio, se priorizó la compatibilidad de VMware, aceptando el compromiso de reducir ciertas protecciones del host.
+> *[Siguiente Fase](01-initial-setup.md)*
