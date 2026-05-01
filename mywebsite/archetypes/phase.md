@@ -40,3 +40,7 @@ network_areas:
 ## Limitaciones actuales
 
 ## Siguiente paso
+
+---
+
+> Enlace a siguiente fase

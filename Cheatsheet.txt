@@ -1,0 +1,11 @@
+hugo new content --kind phase phases/01-phase-name.md
+
+hugo new content --kind procedure procedures/01-procedure-name.md
+
+hugo new content --kind incident incidents/01-incident-name.md
+
+hugo new content --kind adr adr/01-adr-name.md
+
+Reglas:
+- El nombre de los archivos debe estar en inglés y ser el mismo en content/es que en content/en
+- Los comandos crean el contenido únicamente en la carpeta es/, lo que significa que debemos copiar y pegar el archivo manualmente en la carpeta en inglés en/.

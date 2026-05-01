@@ -1,19 +1,22 @@
 ---
 title: '{{ replace .File.ContentBaseName `-` ` ` | title }}'
-description: ''
 summary: ''
-slug: '{{ .File.ContentBaseName }}'
 date: '{{ .Date }}'
 draft: true
 
 c_type:
-  - incident
+    - incident
 
-i_software: []
-i_services: []
-i_phases: []
-i_issue_types: []
-network_areas: []
+i_software:
+    - 
+i_services:
+    - 
+i_phases:
+    - 
+i_issue_types:
+    - 
+network_areas:
+    - 
 ---
 
 ## Síntoma
