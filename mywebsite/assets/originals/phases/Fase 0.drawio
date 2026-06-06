@@ -1,0 +1,55 @@
+<mxfile host="Electron">
+  <diagram name="Página-1" id="7NNBfCUF5YVmIhq4uCWB">
+    <mxGraphModel dx="1414" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="3300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7Nnz6VGjmXNCDPvu-0ZZ-1" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=30;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;align=center;fillColor=#bac8d3;strokeColor=#23445d;" value="" vertex="1">
+          <mxGeometry height="480" width="390" x="230" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nnz6VGjmXNCDPvu-0ZZ-2" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillStyle=auto;swimlaneFillColor=light-dark(#b1ddf0, #ededed);fillColor=#b1ddf0;strokeColor=#10739e;" value="VMware WorkStation Pro" vertex="1">
+          <mxGeometry height="420" width="320" x="280" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nnz6VGjmXNCDPvu-0ZZ-3" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=default;" value="Adaptadores virtuales" vertex="1">
+          <mxGeometry height="360" width="280" x="300" y="151" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nnz6VGjmXNCDPvu-0ZZ-13" parent="7Nnz6VGjmXNCDPvu-0ZZ-3" style="text;strokeColor=#23445d;fillColor=#bac8d3;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="VMnet1 -&amp;gt; 192.168.200.0/24 + DHCP (no usado)" vertex="1">
+          <mxGeometry height="30" width="280" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nnz6VGjmXNCDPvu-0ZZ-4" parent="7Nnz6VGjmXNCDPvu-0ZZ-3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Admin -&amp;gt; 10.10.10.0/24" vertex="1">
+          <mxGeometry height="30" width="280" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nnz6VGjmXNCDPvu-0ZZ-5" parent="7Nnz6VGjmXNCDPvu-0ZZ-3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Servidores -&amp;gt; 10.10.20.0/24" vertex="1">
+          <mxGeometry height="30" width="280" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nnz6VGjmXNCDPvu-0ZZ-6" parent="7Nnz6VGjmXNCDPvu-0ZZ-3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Clientes&amp;nbsp;-&amp;gt; 10.10.30.0/24" vertex="1">
+          <mxGeometry height="30" width="280" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nnz6VGjmXNCDPvu-0ZZ-9" parent="7Nnz6VGjmXNCDPvu-0ZZ-3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="IoTs -&amp;gt; 10.10.40.0/24" vertex="1">
+          <mxGeometry height="30" width="280" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nnz6VGjmXNCDPvu-0ZZ-8" parent="7Nnz6VGjmXNCDPvu-0ZZ-3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="DMZ -&amp;gt; 10.10.50.0/24" vertex="1">
+          <mxGeometry height="30" width="280" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nnz6VGjmXNCDPvu-0ZZ-10" parent="7Nnz6VGjmXNCDPvu-0ZZ-3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Backup -&amp;gt; 10.10.60.0/24" vertex="1">
+          <mxGeometry height="30" width="280" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nnz6VGjmXNCDPvu-0ZZ-11" parent="7Nnz6VGjmXNCDPvu-0ZZ-3" style="text;strokeColor=#23445d;fillColor=#bac8d3;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="VMnet8 -&amp;gt; 192.168.100.0/24 + DHCP + NAT&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="280" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nnz6VGjmXNCDPvu-0ZZ-7" parent="7Nnz6VGjmXNCDPvu-0ZZ-3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Offsite -&amp;gt; 10.20.10.0/24" vertex="1">
+          <mxGeometry height="30" width="280" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nnz6VGjmXNCDPvu-0ZZ-15" parent="7Nnz6VGjmXNCDPvu-0ZZ-3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Extra -&amp;gt; 10.0.0.0/24" vertex="1">
+          <mxGeometry height="30" width="280" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nnz6VGjmXNCDPvu-0ZZ-14" parent="7Nnz6VGjmXNCDPvu-0ZZ-3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Cloud -&amp;gt; 10.254.10.0/24" vertex="1">
+          <mxGeometry height="30" width="280" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nnz6VGjmXNCDPvu-0ZZ-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="PC HOST - WINDOWS 11" vertex="1">
+          <mxGeometry height="30" width="160" x="360" y="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

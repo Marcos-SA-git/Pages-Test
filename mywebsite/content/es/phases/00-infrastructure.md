@@ -68,6 +68,9 @@ Estos segmentos no tendrán DHCP gestionado por VMware, ya que la asignación de
 - VMware se instaló correctamente.
 - Los adaptadores de red añadidos aparecen en la configuración de red del host.
 
+Al finalizar esta fase el resultado es como se muestra a continuación:
+![Diagrama Fase 0](img/phases/Fase_0.svg)
+
 ## Problemas encontrados y aprendizajes
 
 **Problema:** Las interfaces de red instaladas por defecto de VMware están sujetas a ciertas propiedades dentro del software que limitan la personalización. (Véase [Incid. 01](../incidents/01-vmware-net-limitations.md))

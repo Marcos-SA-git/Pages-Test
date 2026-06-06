@@ -1,5 +1,5 @@
 ---
-title: '01 Vmware Net Limitations'
+title: 'Incid. 01 - Vmware Net Limitations'
 summary: ''
 date: '2026-04-30T17:19:21+02:00'
 draft: true

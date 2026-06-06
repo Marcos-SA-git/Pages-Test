@@ -9,15 +9,15 @@ a_software:
     - vmware-workstation
 
 a_services:
-    - routing
-    - network-segmentation
+    - enrutamiento
+    - segmentación de red
 
 a_phases:
-    - phase-0
+    - fase 0
 
 network_areas:
-    - management
-    - clients
+    - administración
+    - clientes
     - servers
     - IoT
     - DMZ
@@ -30,7 +30,7 @@ network_areas:
 
 El laboratorio necesita crecer de forma progresiva hacia una arquitectura con múltiples zonas:
 
-- gestión
+- administración
 - servidores
 - clientes
 - IoT
